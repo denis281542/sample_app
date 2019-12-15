@@ -53,10 +53,9 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
-  gem 'mini_backtrace', '~> 0.1.3'
-  gem 'guard-minitest', '~> 2.4', '>= 2.4.6'
-  gem 'ci_reporter_minitest', '~> 1.0'
-  gem 'minitest'
+  #gem 'mini_backtrace', '~> 0.1.3'
+  #gem 'guard-minitest', '~> 2.4', '>= 2.4.6'
+  #gem 'ci_reporter_minitest', '~> 1.0'
 end
 
 group :production do
