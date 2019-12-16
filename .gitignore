@@ -18,6 +18,9 @@
 !/log/.keep
 !/tmp/.keep
 
+# Игнорировать файлы Spring
+/spring/*.pid
+
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
@@ -34,3 +37,5 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+

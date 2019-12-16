@@ -56,6 +56,7 @@ group :test do
   gem 'mini_backtrace', '~> 0.1.3'
   gem 'guard-minitest', '~> 2.4', '>= 2.4.6'
   gem 'ci_reporter_minitest', '~> 1.0'
+  gem 'guard', '~> 2.16', '>= 2.16.1'
 end
 
 group :production do
