@@ -9,5 +9,10 @@ module SessionsHelper
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
   end
+
+  # Возвращает true, если пользователь зарегистрирован, иначе возвращает false.
+  def logged_in?
+    !current_user.nill?
+  end
 end
 
