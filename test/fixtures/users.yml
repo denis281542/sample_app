@@ -1,0 +1,4 @@
+denis:
+  name: Denis Kuimov
+  email: deniskuimov@mail.ru
+  password_digest: <%= User.digest('password') %>
