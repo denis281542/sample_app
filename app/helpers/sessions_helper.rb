@@ -12,7 +12,7 @@ module SessionsHelper
 
   # Возвращает true, если пользователь зарегистрирован, иначе возвращает false.
   def logged_in?
-    !current_user.nill?
+    current_user.nil?
   end
 end
 
