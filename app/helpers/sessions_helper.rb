@@ -2,7 +2,7 @@ module SessionsHelper
 
   # Осуществляет вход данного пользователя.
   def log_in(user)
-    session[:user_id] = user.id    
+    session[:user_id] = user.id   
   end
 
   # Возвращает текущего вошедшего пользователя (если есть).
@@ -12,7 +12,7 @@ module SessionsHelper
 
   # Возвращает true, если пользователь зарегистрирован, иначе возвращает false.
   def logged_in?
-    current_user.nil?
+    !current_user.nil?
   end
 
   # Осуществляет выход текущего пользователя.
