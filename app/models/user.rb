@@ -25,7 +25,11 @@ class User < ApplicationRecord
   #Запоминает пользователя в базе данных для ипользоваия в постоянных сеансах.
   def remember
     self.remember_token = User.new_token
-    update_attribute(:remember_digest, User.digest(remem
-      ))
+    update_attribute(:remember_digest, User.digest(remember_token))
+  end
+
+  #Возвращает true, если указанный токен соответсвует дайджесту
+  def authenticated?(remember_token)
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
 end
