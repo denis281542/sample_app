@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_accessor :remember_token
   before_save { email.downcase! }
   validates :name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
@@ -19,5 +20,12 @@ class User < ApplicationRecord
   #Возвращает случайный токен
   def User.new_token
     SecureRandom.urlsafe_base64
+  end
+
+  #Запоминает пользователя в базе данных для ипользоваия в постоянных сеансах.
+  def remember
+    self.remember_token = User.new_token
+    update_attribute(:remember_digest, User.digest(remem
+      ))
   end
 end
