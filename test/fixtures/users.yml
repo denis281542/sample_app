@@ -1,4 +1,4 @@
 denis:
   name: Denis Kuimov
-  email: deniskuimov@mail.ru
+  email: deniskuimov@example.com
   password_digest: <%= User.digest('password') %>
