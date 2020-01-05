@@ -2,3 +2,9 @@ denis:
   name: Denis Kuimov
   email: deniskuimov@example.com
   password_digest: <%= User.digest('password') %>
+
+grigory:
+  name: Grigory Kuimov
+  email: grigorykuimov@ya.ru
+  password_digest: <%= User.digest('password') %>
+  
