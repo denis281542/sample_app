@@ -17,8 +17,8 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   test "seccessful edit" do
     get edit_user_path(@user)
     assert_template "users/edit"
-    name = Den
-    email = den@mail.ru
+    name = "Den"
+    email = "den@mail.ru"
     patch user_path(@user), params: { user: { name: name,
                                                email: email,
                                                password: "",
