@@ -15,10 +15,10 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_template "users/edit"                                
   end
 
-  test "seccessful edit" do
-    log_in_as(@user)
+  test "seccessful edit with frendly forwarding" do
     get edit_user_path(@user)
-    assert_template "users/edit"
+    log_in_as(@user)
+    assert_redirected_to edit_user_path(@user)
     name = "Den"
     email = "den@mail.ru"
     patch user_path(@user), params: { user: { name: name,
