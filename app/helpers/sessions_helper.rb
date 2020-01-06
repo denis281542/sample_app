@@ -54,5 +54,10 @@ module SessionsHelper
     redirect_to(session[:forwarding_url] || default)
     session.delete(:forwarding_url)
   end  
+
+  # Запоминание URL
+  def store_location
+    session[:forwarding_url] = request.url if request.get?
+  end
 end
 
