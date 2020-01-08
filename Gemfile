@@ -33,6 +33,7 @@ gem 'sassc-rails', '>= 2.1.0'
 gem 'bcrypt'
 gem 'popper_js', '~> 1.14.5'
 gem 'faker'
+gem 'will_paginate', '~> 3.1.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
