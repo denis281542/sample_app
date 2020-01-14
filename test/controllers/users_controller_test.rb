@@ -3,7 +3,7 @@ require 'test_helper'
 class UsersControllerTest < ActionDispatch::IntegrationTest
   
   def setup
-    @user = users(:denis)
+    @user       = users(:denis)
     @other_user = users(:grigory)
   end
 
@@ -44,5 +44,10 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_url
   end
 
-
+  test "should redirect destroy when not logged in" do
+    assert_not_difference 'User.count' do
+      delete :destroy, id: @user
+    end
+    assert_redirected_to login_url
+  end
 end
